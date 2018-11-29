@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Clarinet</title>
+</head>
+<body>
+  <div align="center">
+      <img src="/static/trumpet.png" alt="">
+  </div>
+<h1>Which violin has an onset marked?</h1>
+<br>
+<table>
+  <tr>
+    <td>
+      Sound 1:
+    </td>
+    <td>
+      <audio controls>
+        <source src="/static/Violin/{{ data.fields[0] }}.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    </td>
+    <tr>
+      <td>
+        Sound 2:
+      </td>
+      <td>
+        <audio controls>
+          <source src="/static/Violin/{{ data.fields[1] }}.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sound 3:
+      </td>
+      <td>
+        <audio controls>
+          <source src="/static/Violin/{{ data.fields[2] }}.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sound 4:
+      </td>
+      <td>
+        <audio controls>
+          <source src="/static/Violin/{{ data.fields[3] }}.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Sound 5:
+      </td>
+      <td>
+        <audio controls>
+          <source src="/static/Violin/{{ data.fields[4] }}.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </td>
+    </tr>
+</table>
+<br>
+<form action="/voteviolin">
+  <input type="radio" name="chosed" value="0">Sound 1<br>
+  <input type="radio" name="chosed" value="1">Sound 2<br>
+  <input type="radio" name="chosed" value="2">Sound 3<br>
+  <input type="radio" name="chosed" value="3">Sound 4<br>
+  <input type="radio" name="chosed" value="4">Sound 5<br>
+  <br>
+  <input type="submit" value="Vote" />
+</form>
+<br><br>
+<a href="/"><button>Return</button></a>
+</body>
+</html>
